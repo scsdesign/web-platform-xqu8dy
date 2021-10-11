@@ -23,12 +23,6 @@
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <style>
-
-
-
-
-
-
       /* Base Styles
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
       /* NOTE
@@ -41,9 +35,10 @@
         font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
         line-height: 1.6;
         font-weight: 400;
-        font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial,
-          sans-serif;
+        font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica,
+          Arial, sans-serif;
         color: #222;
+        background-color: #fff;
       }
 
       /* Typography
@@ -79,7 +74,7 @@
         line-height: 1.35;
         letter-spacing: -0.08rem;
         font-weight: bold;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
       h5 {
         font-size: 1.8rem;
@@ -92,9 +87,10 @@
         letter-spacing: 0;
       }
 
-
-       p{ font-size: 1.2rem;
-        margin-top: 0;}
+      p {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
 
       /* Links
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -104,8 +100,6 @@
       a:hover {
         color: #0fa0ce;
       }
-
-
 
       /* Lists
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -139,11 +133,7 @@
         margin: 0 auto;
         padding: 0 20px;
         box-sizing: border-box;
-
-
       }
-      
-
 
       /* For devices larger than 400px */
       @media (min-width: 400px) {
@@ -153,21 +143,61 @@
         }
       }
 
+      .row {
+        display: flex;
+        width: 90%;
+      }
 
-      .row {display: flex; width: 90%}
+      .row.inner {
+        background-color: #f8f8f8;
+        z-index: 2;
+        margin: 0px;
+        padding: 0px;
+        float: left;
+      }
 
-      .row.inner{background-color: #f8f8f8; z-index: 2; margin: 0px; padding: 0px;  float:left; }
+      .step-numbers {
+        width: 50px;
+        background-color: #ccf2ff;
+        height: 200px;
+        overflow: visible;
+        position: relative;
+        flex: none;
+      }
 
-      .step-numbers{ width: 50px; background-color: #ccf2ff; height: 200px; overflow: visible; position: relative; flex:none;}
+      .number-circle {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: #fff;
+        box-shadow: 0px 0px 12px #999;
+        z-index: 999;
+        text-algin: center !important;
+        left: -6px;
+        top: -10px;
+      }
 
-      .number-circle{ position: absolute; width: 60px; height: 60px; border-radius: 50px; background-color: #fff; box-shadow: 0px 0px 12px #999; z-index:999; text-algin: center !important; left: -6px; top: -10px;}
+      .number-circle h3 {
+        font-weight: bold;
+        text-align: center;
+        margin: 7px auto;
+      }
+      .content {
+        padding: 20px;
+        border-top: 1px dashed #ebebeb;
+      }
 
-      .number-circle h3 {font-weight: bold; text-align: center; margin: 7px auto;}
-      .content{padding:20px; border-top: 1px dashed #ebebeb;  }
+      .columns {
+        display: flex;
+      }
 
-
-
-
+      .c1 {
+        width: 48%;
+      }
+      .c2 {
+        width: 48%;
+      }
 
       /* Media Queries
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -220,9 +250,26 @@
         <div class="content" style="background-color: #f8f8f8">
           <h4>Fill out intake form</h4>
           <p>
-            Fill out our <a href="http://www.getskeleton.com">intake form here</a>.. You will need to provide the following information.
-            
+            Fill out our
+            <a href="http://www.getskeleton.com">intake form here</a>.. You will
+            need to prov the following information. llllll
           </p>
+          <div class="columns">
+            <div class="c1">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="c2">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
